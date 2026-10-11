@@ -54,3 +54,10 @@ app.include_router(recommendations_router)
 @app.get("/health", tags=["health"])
 def health_check():
     return {"status": "ok", "service": "LearnSphere AI"}
+@app.get("/")
+def root():
+    return {
+        "message": "Welcome to LearnSphere AI",
+        "status": "running",
+        "docs": "/docs"
+    }
