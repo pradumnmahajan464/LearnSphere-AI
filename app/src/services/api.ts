@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// Use relative URL so requests go through Vite's proxy — no CORS issues
 const api = axios.create({
-  baseURL: '',
+  baseURL: import.meta.env.VITE_API_URL,
   headers: { 'Content-Type': 'application/json' },
 });
 
